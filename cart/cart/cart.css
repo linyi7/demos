@@ -1,0 +1,186 @@
+@CHARSET "UTF-8";
+.content{
+	background: #f5f5f5;
+	padding: 2em 0 2em;
+	font-family: "SimHei";
+}
+
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.container{
+	min-width: 900px!important;
+}
+.nav-guide{
+	margin: 0 0 1em;
+}
+.nav-guide,.nav-guide a{
+	color: #999;
+}
+
+/*
+	购物车
+*/
+.car-box{
+	border: 1px solid #e7e7e7;
+}
+.car-title{
+	width: 100%;
+	height: 40px;
+	background: #f5f5f5;
+}
+.item-single, .item-list{
+	transition: 0.35s all ease-in;
+}
+.car-title  > div, .item-single > div{
+	width: 12%;
+	float: left;
+	text-align: center;
+}
+.car-title  > div{
+	line-height: 40px;
+	height: 40px;
+}
+.car-title  > div:nth-child(2) span.half{
+	display:block;
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+.car-title  > div:nth-child(2) span.half:last-child , .car-goods-msg > div:last-child{
+	text-align: center;
+}
+.car-title  > div:nth-child(2), .item-single > div:nth-child(2){
+	width: 38%;
+	text-align: left;
+	padding-left: 1%;
+}
+.car-title  > div:nth-child(1), .item-single > div:nth-child(1){
+	text-align: left;
+	padding-left: 1%;
+}
+input[type="checkbox"]{
+	vertical-align: middle;
+	margin: -2px 5px 0;
+}
+.check-box > input{
+	margin: 0;
+	width: 20%;
+	margin-right: 2%;
+	float: left;
+}
+.check-box > div{
+	float: left;
+	width: 76%;
+	height:0;
+	padding-bottom: 64.6%;
+	overflow: hidden;
+}
+.check-box > div >img{
+	width: 100%;
+	border: 1px solid #eee;
+}
+.item-single{
+	padding: 15px 0 10px;
+	overflow: hidden;
+	border-bottom: 1px solid #e7e7e7;
+}
+.item-single:last-child{
+	border: none;
+}
+.car-goods-msg{
+	overflow: hidden;
+}
+.car-goods-msg > div{
+	width: 50%;
+	float: left;
+	line-height: 22px;
+}
+.car-goods-msg h4{
+	color: #000;
+	font-weight: 200;
+	font-size: 14px;
+	margin-top: 3px;
+}
+.car-goods-msg p{
+	color: #999;
+}
+.numbers{
+	overflow: hidden;
+	display: inline-block;
+}
+ .numbers >span{
+	display: block;
+	float: left;
+	border: 1px solid #a6a6a6;
+ 	height: 30px;
+ 	line-height: 20px;
+ 	-webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+.numbers >span:nth-child(1), .numbers >span:nth-child(3){
+	padding:  5px;
+	cursor: pointer;
+}
+.numbers >span:nth-child(2){
+	padding: 5px 10px;
+	border-width: 1px 0;
+}
+.total-div, #total-price{
+	color: #d23e3e;
+	font-weight: bold;
+}
+.handle p{
+	line-height: 20px;
+	cursor: pointer;
+	font-size: 12px;
+}
+.handle p:hover{
+	color: #bc9334;
+}
+.fixed-bottom{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 1000;
+	left:0;
+}
+.cart-toolbar.fixed-bottom{
+	padding:0;
+}
+.cart-toolbar {
+	height: 60px;
+	line-height: 60px;
+	margin-top: 30px;
+	background: #f5f5f5;
+	border: 1px solid #e5e5e5;
+	padding: 0 0 0 15px;
+}
+.cart-toolbar .to-add-container > div{
+	margin: 0 10px;
+}
+.cart-toolbar .to-add-container > div.fl{
+	cursor: pointer;
+}
+ div.settle{
+	margin-right:0 !important;
+	width: 110px;
+	height: 100%;
+	background: #b3d1eb;
+	text-align: center;
+	font-size: 16px;
+}
+ div.settle a{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.settle:hover, .settle a:hover{
+	background: #6e91af;
+	color: #f5f5f5;
+}
