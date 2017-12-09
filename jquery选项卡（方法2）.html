@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery选项卡（方法2）</title>
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+	<style>
+		*{margin: 0px;padding: 0px}
+		body{padding: 50px}
+		ul {list-style-type: none;}
+		#list{
+			height: 30px;line-height: 30px;
+			margin-bottom: 2px
+		}
+		#list li{
+			width: 100px;text-align: center;
+			border:1px solid green;
+			background: rgba(100,50,20,0.2);
+			float:left;
+			cursor: pointer;
+		}
+		#content{
+			width: 304px;height: 150px;
+		    border:1px solid green;border-top: none;
+		}
+		#content div{display: none;	 }
+		#content div.show{display: block;}
+		#list li.active{
+			background: #fff;
+			border-bottom: none;
+		}
+		
+	</style>
+</head>
+<body>
+<div id="tab">
+	<ul id="list">
+		<li class="active">第一部分</li>
+		<li>第二部分</li>
+		<li>第三部分</li>
+	</ul>
+	<div id="content">
+		<div class="show">JS进阶......</div>
+		<div>JQ精讲......</div>
+		<div>JS+JQ+CSS3特效、技巧、案例专题......</div>
+	</div>
+</div>
+	<script>
+		$(function(){
+			var $li=$('#list li')
+			$li.click(function(){
+				$(this).addClass('active').siblings().removeClass('active');
+				$('#content div').eq($li.index(this)).show().siblings().hide()
+			})
+		})
+	</script>
+</body>
+</html>
+
+<!--// alert($li.index(this))
+ //index()	
+返回指定元素相对于其他指定元素的 index 位置
+eq($li.index(this)).css('display','block').siblings().css('display','none')
+			// $('#content div').eq($li.index(this)).show().siblings().hide() -->

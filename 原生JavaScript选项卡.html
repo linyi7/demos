@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原生JavaScript选项卡</title>
+	<style>
+	*{margin:0px;padding: 0px }
+	body{padding: 50px}
+	#list{
+		list-style-type: none; 
+		height: 30px;
+		font-size: 14px
+	}
+	#list li{
+		width: 80px;
+		margin-right: 5px;
+		height: 30px; line-height: 30px; 
+		text-align: center;
+		border: solid green 1px;border-bottom: none;
+		border-radius: 5px 5px 0 0;
+		float: left;
+		cursor: pointer;
+	}
+	#content div{
+		width: 400px;
+		height: 150px;
+		border:1px solid green;
+		display: none;
+		background: rgba(100,50,20,0.2);
+	 }
+	 #content div.show{display: block;}
+	 #list li:hover{
+	 		background: rgba(100,50,20,0.4);
+		}
+	.active{background: rgba(100,50,20,0.2);}
+	</style>
+</head>
+<body>
+<div id="tab">
+	<ul id="list">
+		<li class="active">第一部分</li>
+		<li>第二部分</li>
+		<li>第三部分</li>
+	</ul>
+	<div id="content">
+		<div class="show">JS进阶......</div>
+		<div>JQ精讲......</div>
+		<div>JS+JQ+CSS3特效、技巧、案例专题......</div>
+	</div>
+</div>
+	<script>
+		// var list=document.getElementById('list')
+		// var content=document.getElementById('content')
+		// var oli=list.getElementsByTagName('li')
+		// var li_content=	content.getElementsByTagName('div')
+		var oli=document.getElementById('list').getElementsByTagName('li')	
+		var li_content=	document.getElementById('content').getElementsByTagName('div')
+		for(var i=0;i<oli.length;i++){
+			oli[i].index=i
+			oli[i].onclick=function(){
+				
+				//首先获取到当前被点击li的索引
+				//alert(this.index)
+
+				//点击后让相应的div显示到当前
+				for(var j=0;j<li_content.length;j++){
+					oli[j].className="";
+					li_content[j].style.display='none'
+				}
+				li_content[this.index].style.display='block';
+				oli[this.index].className="active";
+				
+			}
+		}
+	</script>
+</body>
+</html>

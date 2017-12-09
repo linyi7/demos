@@ -1,0 +1,75 @@
+
+<html>
+<head>
+  <title>jquery点击显示和隐藏面板</title>
+  <meta charset="UTF-8">
+</head>
+<script  src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+<body>
+<style>
+body {
+  font: 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+}
+.panel {
+  border-top: 2px solid #9799a7;
+}
+.panel-stage {
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+  display: none;
+  height: 80px;
+  margin: 0 auto;
+  width: 80%;
+}
+.panel-tab {
+  background: linear-gradient(#fff, #f4f5f4);
+  border: 1px solid #dedede;
+  border-top: 0;
+  border-radius: 0 0 4px 4px;
+  color: #0087cc;
+  display: block;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 5px 0;
+  margin: 0 auto;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 80px;
+}
+.panel-tab:hover {
+  color: #ff7b29;
+}
+.panel-tab span {
+  font-size: 9px;
+  padding-left: 2px;
+}
+</style>
+
+
+<div class="panel">
+  <div class="panel-stage">
+  <p>知乎上为什么那么多的大神？知乎上为什么那么多的大神知乎上为什么那么多的大神？知乎上为什</p>
+  <p>么那么多的大神？知乎上为什么那么多的大神？知乎上为什么那么多的大神？</p>
+
+  </div>
+  <a href="#" class="panel-tab">显示 <span>&#9660;</span></a>
+</div>
+
+
+<script>
+$('.panel-tab').on('click', function(event){
+  event.preventDefault();
+  $('.panel-stage').slideToggle('slow', function(event){
+    if($(this).is(':visible')){
+      $('.panel-tab').html('隐藏 <span>&#9650;</span>');
+    } else {
+      $('.panel-tab').html('显示 <span>&#9660;</span>');
+    }
+  });
+});
+</script>
+
+</body>
+
+</html>
