@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>记录点击div次数</title>
+	<style type="text/css">
+		input{
+			width: 150px;
+			height: 80px;
+			border-radius: 10px;
+			font-size: 24px;
+			padding: 10px;
+			background: green;
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="按钮A" onclick="countA()">
+	<input type="button" value="按钮B" onclick="countB()">
+	<input type="button" value="按钮C" onclick="countC()">
+ <script>
+  function fex(){
+  	var count=0;
+  	function increment(){
+  		 count+=1;
+  		alert ('您点击了我'+count+'次')
+  	}
+  	return increment;
+  }
+  var countA= fex();
+  var countB= fex();
+  var countC= fex();
+ </script>
+</body>
+</html>
