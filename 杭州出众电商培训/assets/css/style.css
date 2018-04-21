@@ -252,7 +252,8 @@ border-radius: 0px;
     background-color:rgba(20, 173, 124, 1);
 }
 .about-us{
-    margin:0 10 0 10;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 
