@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>json练习</title>
+</head>
+<body>
+	<script>
+// 	json 字符串解析成对象
+// var jsonstr='[{"name":"aaa","age":30},{"name":"bbb","age":25},{"name":"ccc","age":18}]';//单双引号里面的都是字符串，要用parse解析成对象object才能操作访问
+//     //alert(typeof(jsonstr))
+   
+
+//     // var jsonobj=JSON.parse(jsonstr);
+//     //alert(typeof(jsonobj))
+//     //alert(jsonobj)
+//     //alert(jsonobj[0].name)
+    
+
+//   var jsonobj=JSON.parse(jsonstr,function(key,value){
+//   	if((key=="name")){
+//   		return "vip会员:"+value
+//   	}else{ return value}
+//   })
+//   alert(jsonobj[1].age)
+
+
+// json 对象序列化成字符串
+
+var jsonobj=[
+   {
+   	name:"aaa",
+   	age:30,
+   	lv:2
+   },
+   {
+   	name:"bbb",
+   	age:25,
+   	lv:4
+   }
+   ]
+//alert(jsonobj[0].name+","+jsonobj[1].age)
+ // var jsonstr=JSON.stringify(jsonobj);
+ // alert(typeof(jsonobj));
+ //  alert(typeof(jsonstr));
+// 第二个参数
+// var jsonstr=JSON.stringify(jsonobj,['name','lv']);//显示中括号里面的参数
+// alert(jsonstr)
+// var jsonstr=JSON.stringify(jsonobj,function(key,value){
+// if((key=='lv')){
+// 	return "等级为："+value
+// }else{ return value}
+// })
+// alert(jsonstr)
+
+//第3个参数
+var jsonstr=JSON.stringify(jsonobj,null,1)
+alert(jsonstr)
+	</script>
+</body>
+</html>
