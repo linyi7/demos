@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<!-- 创建对象的方法! -->
+<!-- <script>
+	function createPeople(name,film){
+       var people=new Object();
+           people.name=name;
+           people.film=film;
+           people.fun=function(){
+           	alert(this.name+"拍过的电影有"+this.film)
+           }
+           return people;
+	}
+	var mero=new createPeople("斯皮尔伯格","阿凡达");
+	mero.fun();
+
+	 var Go=new Object();
+    Go.name="姚明",
+    Go.trick="扣篮",
+    Go.fun=function(){
+       return  this.name+"的绝招是"+this.trick
+    }
+  
+   alert(Go.fun());
+
+   function Gan(name,money){
+       this.name=name;
+       this.money=money;
+       this.fun=function(){
+       	return this.name+"欠我"+this.money+"元钱"
+       }
+   }
+    var hao=new Gan("豪罡","2000");
+    alert(hao.fun());  
+
+    function Yuan(){}
+    Yuan.prototype.name="小明",
+    Yuan.prototype.money="0",
+    Yuan.prototype.fun=function(){
+    	return this.name+"欠我"+this.money+"元钱"
+    }
+	  var xiaoming=new Yuan();
+	  alert (xiaoming.fun());
+
+	 function yuanXin(){};
+	 yuanXin.prototype={
+	 	name:"小花",
+	 	money:"3",
+	 	fun:function(){return this.name+"欠我"+this.money+"元钱"}
+	 }
+	 var xiaohua=new yuanXin();
+	 alert(xiaohua.fun());
+
+	 function zuHe(name,weapon){
+	 	constructor:zuHe;
+        this.name=name;
+        this.weapon=weapon;
+	 }
+	 zuHe.prototype={
+	 	fun:function(){return this.name+"的武器是"+this.weapon}
+	 }
+	 var lin=new zuHe("王林建","编程");
+	 alert(lin.fun());
+
+	 function Ag(name1,name2){
+	 	constructor:Ag;
+	 	this.name1=name1;
+	 	this.name2=name2;
+	 };
+	 Ag.prototype={
+	 	fun:function(){
+	 	return	this.name1+"又被称为"+this.name2
+	 	}
+	 }
+      var feixia=new Ag("kobe","黑曼巴");
+      alert(feixia.fun());
+      alert(feixia.name1);
+</script> -->
+
+
+
+
+
+<!-- 继承的三种方法-->
+
+<script>
+  //用apply和call方法的对象冒充继承
+//   function Monkey(name,weapon){
+//      this.name=name
+//      this.weapon=weapon
+//      this.say=function(){alert('我是快乐的'+this.name )}
+//   }
+// function Magicmonkey(name,weapon){
+// 	Monkey.apply(this,[name,weapon])
+// }
+//  var wukong=new Magicmonkey("孙悟空","金箍棒")
+//      wukong.say();
+//      alert(wukong.weapon);
+
+
+
+   // //用原型链继承的方法
+   // function Monkey(){};
+   // Monkey.prototype.name="孙悟空";
+   // Monkey.prototype.weapon="金箍棒";
+   // Monkey.prototype.fun=function(){alert('我是快乐的猴子，名叫'+this.name)}
+
+   // function Magicmonkey(){};
+   // Magicmonkey.prototype=new Monkey();
+   //  var wukong=new Magicmonkey();
+   //  alert(wukong.name);
+   //  wukong.fun();
+
+
+
+//混合模式实现继承
+//  function Monkey(name,weapon){
+//      this.name=name;
+//      this.weapon=weapon;
+
+//  }
+//  Monkey.prototype.fun=function(){ alert(this.name+"的武器是"+this.weapon)};
+
+// function Magicmonkey(name,weapon){
+// 	Monkey.apply(this,[name,weapon])
+// }
+//    Magicmonkey.prototype=new Monkey();
+// var wukong=new Magicmonkey('孙悟空','金箍棒');
+//     alert(wukong.name);
+//     alert(wukong.weapon);
+//     wukong.fun();
+
+
+//案例练习
+ // function Hero(name,type,home,weapon){
+ // 	this.name=name;
+ // 	this.type=type;
+ // 	this.home=home;
+ // 	this.weapon=weapon?weapon:'剑';
+ // 	this.skill=function(){
+ // 		alert(this.name+'向敌人发动了普通攻击')
+ // 	}
+ // }
+ // var user=new Hero('阿吉','战士','新手村')
+
+ //  delete user.name
+ //  delete user.skill
+ //  user.sex="男";
+ // document.write('user包含如下属性和方法：<hr/>')
+ // for (var i in user){
+ // 	if( typeof(user[i])=='function'){
+ // 	document.write('方法'+':'+i+user[i]+'<br/>')
+ // 	}else{
+ // 		document.write('属性'+':'+i+user[i]+'<br/>')
+ // 	}
+ // }
+
+//将一个对象赋值到另外一个对象的属性中
+// function Hero(name,type,home,weapon){
+//  	this.name=name;
+//  	this.type=type;
+//  	this.home=home;
+//  	this.weapon=weapon?weapon:'剑';
+//  	this.skill=function(){
+//  		alert(this.name+'向敌人发动了普通攻击')
+//  	}
+//  }
+//  var user=new Hero('阿吉','战士','新手村')
+
+//  function sword(){
+//  	this.Att=100;
+//  	this.Level=1;
+//  }
+//   var xsj=new sword();
+//   var user=new Hero('阿吉','战士','新手村',xsj)
+//   alert(user.weapon.Att);
+//   alert(user.weapon.Level);
+
+
+  //创建两个继承关系的对象
+   function people(){
+   	this.type="人";
+   }
+   people.prototype.fun=function(){
+   	alert('这是一个人')
+   }
+
+   function student(name,sex){
+   	people.call(this);
+   	this.name=name;
+   	this.sex=sex;
+   }
+   student.prototype=new people()
+   student.prototype.say=function(){
+   	alert('我是一名学生')
+   }
+ var xiaoming=new student('小明','男');
+ alert(xiaoming.type)
+  alert(xiaoming.name)
+   xiaoming.fun()
+    xiaoming.say()
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>构造函数和原型模式组合创建对象</title>
+</head>
+<body>
+	<script>
+     function Monster(name,job){
+     	constructor:Monster;
+     	this.name=name;
+     	this.job=job;
+
+     }
+     Monster.prototype={
+     	fun:function(){ return this.name+"的工作是"+this.job}
+          }
+     var xiaoming=new Monster("小明","混日子");
+     var xiaohua=new Monster("小花","做鸡");
+     alert(xiaoming.fun());
+     alert(xiaohua.fun());
+	</script>
+</body>
+</html>

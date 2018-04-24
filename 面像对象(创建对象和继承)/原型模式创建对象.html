@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原型模式创建对象</title>
+</head>
+<body>
+	<!-- <script>
+     function Go(){};
+     Go.prototype.name="喽啰";
+     Go.prototype.weapon="大刀";
+     Go.prototype.fun=function(){
+     	alert( this.name+"的武器是"+this.weapon )
+     }
+     var lou=new Go();
+     lou.fun();
+    alert(lou.name) ;
+	</script> -->
+
+	<script>
+  function Go(){};
+  Go.prototype={
+  	constructor:Go,
+  	name:"美工",
+  	weapon:"网页设计师",
+  	fun:function(){
+  		alert(this.name+"的别名是"+this.weapon)
+  	}
+  }
+  var lou=new Go();
+   lou.fun();
+	</script>
+</body>
+</html>
