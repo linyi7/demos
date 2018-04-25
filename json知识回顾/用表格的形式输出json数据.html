@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>练习01</title>
+	<style type="text/css">
+	td{
+      width: 150px;
+      height: 30px;
+      background: rgba(10,100,10,0.3);
+    }
+	</style>
+</head>
+<body>
+	<script>
+	////假定下面数据时从服务器获取到的,然后用表格的形式输出到页面。
+		var jsonstr='[{"name":"aaa","age":30},{"name":"bbb","age":25},{"name":"ccc","age":18}]'
+
+		function textJson(){
+			var jsonobj=JSON.parse(jsonstr)
+			// alert(jsonstr)
+			// alert(jsonobj)
+			 output(jsonobj)
+		}
+
+		function output(o){
+			document.write('<table><tr><th>key</th><th>value</th></tr>')
+			for(var i in o){
+				// alert(o[i])
+				for (var j in o[i]){
+					// alert(o[i][j])
+					document.write('<tr><td>'+j+'</td>'+'<td>'+o[i][j])+'</td></tr>'
+				}
+
+			}
+			document.write('</table>')
+
+		}
+		textJson()
+	</script>
+</body>
+</html>
