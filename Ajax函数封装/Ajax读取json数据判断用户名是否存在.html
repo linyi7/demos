@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <title>ajax判断用户名是否存在</title>
+  <script type="text/javascript" src="ajax1.js"></script>
+  <style type="text/css">
+  #sp{
+      color: orange;
+    }
+  </style>
+</head>
+<body>
+  <form action="#" id="form1" method="get">
+    <p>用户名：<input type="text" id="username" name="username"><span id="sp"></span></p>
+    <p>密&nbsp&nbsp码：<input type="password" id="password" name="password"></p>
+    <input type="button" value="提交" onclick="checkName()">
+  </form>
+  <script>
+      function checkName(){
+        var username=document.getElementById('username').value;
+        var sp=document.getElementById('sp')
+        var boo=false;
+        ajax('names.json',function(str){
+          // alert(typeof str)
+          var nameArr=JSON.parse(str)
+          // alert(typeof nameArr)
+          for(var i=0;i<nameArr.length;i++){
+            if (nameArr[i]==username) {
+              // alert('用户名已经存在')
+             boo=true;
+            }//else{
+              //alert('用户名可以使用')
+            //}
+          }
+          if (boo) {
+            sp.innerHTML='您来晚了，这个用户名已经存在,请再换一个'
+            // alert('用户名已经存在')
+          }else{
+            // alert('用户名可以使用')
+            sp.innerHTML='恭喜您，这个用户名可以使用'
+          }
+        })
+      }
+  </script>
+</body>
+</html>
