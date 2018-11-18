@@ -1,0 +1,111 @@
+---
+update_time: '2018.11.18'
+name: 王林建
+keywords: 前端,工作简历
+ga_id: 'UA-92595311-1'
+age: 28岁
+gender: 男
+school: 南昌大学共青学院
+profession: 广告设计
+
+github: https://github.com/linyi7
+website: www.senou.net
+online: https://github.com/linyi7
+print: https://github.com/linyi7
+apply_to_position: Web前端工程师
+description: !!md |
+  我叫王林建自学web前端。
+contact: # 联系方式
+  -
+    icon: fa-envelope
+    name: Email
+    value: 645732139@qq.com
+  -
+    icon: fa-qq
+    name: QQ
+    value: '645732139'
+  -
+    icon: fa-phone-square
+    name: PhoneNumber
+    value: '13018912355'
+honor: # 奖项荣誉
+tech: # 技能点
+  -
+    name: HTML5/CSS3
+    percentage: 90%
+  -
+    name: JavaScript
+    percentage: 70%
+  -
+    name: vue
+    percentage: 80%
+  -
+    name: PHP
+    percentage: 50%
+  -
+    name: Git
+    percentage: 60%
+  -
+    name: Node.js
+    percentage: 40%
+experience: # 项目经验
+  -
+    section: 个人项目
+    project:
+      -
+        name: 动画简历
+        date: 2017.6
+        img:
+        website: www.senou.net
+        source_code: https://github.com/linyi7
+        des: !!md |
+          国外的一个个人简历为灵感来源，copy了一些比较难的动画代码，自己设计UI，重构自己的简历。
+          上线后百度关键词“web前端简历”排名迅速稳定前5。吸引了一部分前端爱好者的关注。每天流量访客稳定在80-100左右。
+      -
+        name: smartisan锤子商城（vue，vuex）
+        date: 2018.5
+        img:
+        website: http://www.senou.net/smartisan/
+        source_code: https://github.com/linyi7/demos/tree/master/vue-%E5%95%86%E5%9F%8E
+        des: !!md |
+          整个商城前端业务逻辑实现，使用json模拟数据，使用vuex实现一些状态管理。
+          
+          
+      -
+        name: 微信小程序闹钟商城
+        date: 2017.11
+        img:
+        website: http://www.senou.net/clock/
+        source_code: https://github.com/linyi7/demos/tree/master/%E7%94%B5%E5%95%86%E9%97%B9%E9%92%9F%E5%95%86%E5%9F%8E
+        des: !!md |
+          技术栈: cs框架:jquery-weui 轮播滑动:swiper还有fastclick解决点击延迟。
+      -
+        name: Bootstrap框架完成的单页。
+        date: 2017.1
+        img:
+        website: http://www.senou.net/Outstanding/
+        source_code: https://github.com/linyi7/demos/tree/master/%E6%9D%AD%E5%B7%9E%E5%87%BA%E4%BC%97%E7%94%B5%E5%95%86%E5%9F%B9%E8%AE%AD
+        des: !!md |
+          使用Bootstrap栅格系统，同时适配电脑和手机端做的一个单页。
+          
+          
+  -
+    
+skill: # 技能清单
+      -
+        des: !!md |
+          能够用 HTML5 + CSS3 编写语义化的代码，完成较复杂的布局，熟悉Stylus、 等css预处理、后处理工具
+      -
+        des: !!md |
+          在smartisan项目中熟悉了 Vue，写过Vue的双向数据绑定， 使用了 ES6、7 的新语法，了解 Node.js, jQuery.
+      -
+        des: !!md |
+          熟悉 Git Webpack Gulp 等开发工具
+      -
+        des: !!md |
+          熟悉 dedecms, Express, MongoDB, Mysql 能搭建简单的后端项目，租了阿里云 部署网站
+
+
+
+
+---
