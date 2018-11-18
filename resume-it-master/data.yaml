@@ -10,16 +10,17 @@ profession: 广告设计
 
 github: https://github.com/linyi7
 website: www.senou.net
-online: https://github.com/linyi7
-print: https://github.com/linyi7
+online: www.senou.net
+print: www.senou.net
 apply_to_position: Web前端工程师
+apply_to_salary: 12K 
 description: !!md |
   我叫王林建自学web前端。
 contact: # 联系方式
   -
     icon: fa-envelope
     name: Email
-    value: 645732139@qq.com
+    value: eimichs@126.com
   -
     icon: fa-qq
     name: QQ
@@ -31,7 +32,7 @@ contact: # 联系方式
 honor: # 奖项荣誉
 tech: # 技能点
   -
-    name: HTML5/CSS3
+    name: HTML/CSS
     percentage: 90%
   -
     name: JavaScript
@@ -39,41 +40,33 @@ tech: # 技能点
   -
     name: vue
     percentage: 80%
-  -
-    name: PHP
-    percentage: 50%
-  -
-    name: Git
-    percentage: 60%
-  -
-    name: Node.js
-    percentage: 40%
+
 experience: # 项目经验
   -
     section: 个人项目
     project:
       -
         name: 动画简历
-        date: 2017.6
+        date: 
         img:
-        website: www.senou.net
+        website: http://www.senou.net
         source_code: https://github.com/linyi7
         des: !!md |
           国外的一个个人简历为灵感来源，copy了一些比较难的动画代码，自己设计UI，重构自己的简历。
           上线后百度关键词“web前端简历”排名迅速稳定前5。吸引了一部分前端爱好者的关注。每天流量访客稳定在80-100左右。
       -
         name: smartisan锤子商城（vue，vuex）
-        date: 2018.5
+        date: 
         img:
         website: http://www.senou.net/smartisan/
         source_code: https://github.com/linyi7/demos/tree/master/vue-%E5%95%86%E5%9F%8E
         des: !!md |
-          整个商城前端业务逻辑实现，使用json模拟数据，使用vuex实现一些状态管理。
+          整个商城前端业务逻辑实现，组件化工程化的实现。商品组件，购物车模块，购买流程，地址添加更改，使用json模拟数据，使用vuex实现一些状态管理。
           
           
       -
         name: 微信小程序闹钟商城
-        date: 2017.11
+        date: 
         img:
         website: http://www.senou.net/clock/
         source_code: https://github.com/linyi7/demos/tree/master/%E7%94%B5%E5%95%86%E9%97%B9%E9%92%9F%E5%95%86%E5%9F%8E
@@ -81,7 +74,7 @@ experience: # 项目经验
           技术栈: cs框架:jquery-weui 轮播滑动:swiper还有fastclick解决点击延迟。
       -
         name: Bootstrap框架完成的单页。
-        date: 2017.1
+        date: 
         img:
         website: http://www.senou.net/Outstanding/
         source_code: https://github.com/linyi7/demos/tree/master/%E6%9D%AD%E5%B7%9E%E5%87%BA%E4%BC%97%E7%94%B5%E5%95%86%E5%9F%B9%E8%AE%AD
@@ -105,6 +98,16 @@ skill: # 技能清单
         des: !!md |
           熟悉 dedecms, Express, MongoDB, Mysql 能搭建简单的后端项目，租了阿里云 部署网站
 
+      -
+        des: !!md |
+          熟悉Svn/Git/版本管理、文档和自动化部署工具
+      -
+        des: !!md |
+          熟悉使用SimpleTest/Qunit单元测试
+      -
+        des: !!md |
+          熟悉/微博开放平台/微信应用开发平台
+      
 
 
 
