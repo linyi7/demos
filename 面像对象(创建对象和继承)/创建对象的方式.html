@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	//原始模式创建对象
+      // var people = new Object();
+      //     people.name = '猪八戒';
+      //     people.weapon = '钉耙';
+      //     people.fun = function(){
+      //     	return this.name + '的武器是' + this.weapon
+      //     }
+      // alert(people.fun())
+    //工厂模式创建对象
+    //  function greatPeople(name,weapon){
+    // 	var people = new Object();
+    // 	    people.name = name;
+    // 	    people.weapon = weapon;
+    // 	    people.fun = function(){
+    // 	    	return this.name +'的武器是' + this.weapon
+    // 	    }
+    // 	return people
+    // }
+    // //var houz = greatPeople('猴子','金箍棒')
+    // var bajie = greatPeople('八戒','钉耙')
+    // alert (bajie.name)
+    
+    //构造函数模式
+    // function greatPeople(name,weapon){
+    // 	this.name= name;
+    // 	this.weapon =weapon;
+    // 	this.fun=function (){
+    //       return this.name +'的武器是' + this.weapon
+    // 	}
+    // }
+    // var tangs = new greatPeople('唐僧','紧箍咒')
+    // alert(tangs.fun())
+    // 
+    // 原型模式01
+    // function people(){};
+    //    people.prototype.name = '喽啰';
+    //    people.prototype.weapon ='大刀';
+    //    people.prototype.run = function(){
+    //    	return this.name+'的武器是'+this.weapon
+    //    }
+    //    var greatePeople = new people()
+    //    alert(greatePeople.run())
+    // 原型模式02
+    // function people1(){};
+    // people1.prototype ={
+    // 	constructor: people1,
+    // 	name: '喽啰',
+    // 	weapon: '大刀',
+    // 	run: function(){ return this.name+'的武器是'+this.weapon } 
+    // }
+    // var greatePeople = new people1()
+    // alert(greatePeople.run())
+    // 
+    // 构造函数和原型组合模式
+     // function people(name,arr){
+     // 	constructor: people;
+     // 	this.name = name;
+     // 	this.job = arr;
+     // }
+     // people.prototype ={
+     // 	run:function(){ return this.name+'的工作是'+this.job }
+     // }
+
+     // var greatePeople = new people('喽啰',['巡山','打更'])
+     // var greatePeople1 = new people('猴子',['保护唐僧'])
+     // alert(greatePeople.run())
+     // alert(greatePeople1.run())
+     // 
+     // 动态原型模式(更好的封装性)
+     
+     function people(name,arr){
+     	
+     	this.name= name;
+     	this.job= arr;
+     	people.prototype.run = function(){ return this.name+'的工作是'+this.job }
+     }
+    var greatePeople = new people('沙僧','挑担')
+    var greatePeople1 = new people('猴子','保护唐僧')
+    alert(greatePeople.run())
+     alert(greatePeople1.run())
+     	
+	</script>
+</body>
+</html>
