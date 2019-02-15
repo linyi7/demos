@@ -6,19 +6,7 @@
       </div>
       
       <p>{{home.survey}}</p>
-      <strong>项目组员信息</strong>
-      <table>
-        <tr>
-          <th>组长</th>
-          <th>组员</th>
-          <th>使用的技术</th>
-        </tr>
-        <tr>
-          <td>{{home.projectTeam.groupLeader}}</td>
-          <td>{{home.projectTeam.teamMembers}}</td>
-          <td>{{home.projectTeam.technology}}</td>
-        </tr>
-      </table> 
+      
       <strong>医院系统部分功能块介绍</strong>
       <div class="nurse">
         <h4>一、护士系统</h4>
