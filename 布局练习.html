@@ -1,140 +1,126 @@
-<!DOCTYPE html>
-<html>
- 
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<style type="text/css">
-			* {
-				margin: 0;
-				padding: 0;
-			}
-			/*居中
-			 * margin: 0 auto;*/
-			#all {
-				width: 970px;
-				height: 593px;
-				margin: 0 auto;
-			}
-			
-			#top-left {
-				width: 277px;
-				height: 103px;
-				background-color: red;
-			}
-			
-			#top-right {
-				margin-top: -103px;
-				width: 679px;
-				height: 103px;
-				float: right;
-			}
-			
-			#top-right1 {
-				margin-left: 542px;
-				width: 137px;
-				height: 49px;
-				background-color: green;
-			}
-			
-			#top-right2 {
-				margin-top: 8px;
-				width: 679px;
-				height: 46px;
-				background-color: green;
-			}
-			
-			#center {
-				margin-top: 10px;
-			}
-			
-			#center-left {
-				float: left;
-				width: 310px;
-				height: 435px;
-				background-color: yellow;
-			}
-			
-			#lanse1 {
-				float: left;
-				width: 450px;
-				height: 240px;
-				background-color: skyblue;
-				margin-left: 10px;
-			}
-			
-			#lanse2 {
-				float: left;
-				width: 450px;
-				height: 110px;
-				background-color: skyblue;
-				margin-top: 10px;
-				margin-left: 10px;
-			}
-			
-			#lanse3 {
-				float: left;
-				width: 450px;
-				height: 30px;
-				background-color: skyblue;
-				margin-top: 10px;
-				margin-left: 10px;
-			}
-			
-			#zise {
-				float: left;
-				width: 190px;
-				height: 400px;
-				background-color: purple;
-				margin-top: -360px;
-				margin-left: 10px;
-			}
-			
-			#lvse {
-				width: 650px;
-				height: 25px;
-				background-color: green;
-				float: left;
-				margin-left: 10px;
-				margin-top: 10px;
-			}
-			
-			#bottom {
-				width: 975px;
-				height: 35px;
-				background-color: #0000FF;
-				margin-top: 10px;
-				float: left;
-			}
-		</style>
-	</head>
- 
-	<body>
-		<div id="all">
-			<div id="top">
-				<div id="top-left"></div>
-				<div id="top-right">
-					<div id="top-right1"></div>
-					<div id="top-right2"></div>
-				</div>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>布局练习</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#top{
+			margin: 0 auto;
+			/*top栏居中对齐*/
+			height: 103px;
+			width: 970px;
+		}
+		#top #logo{
+			height: 103px;
+			width: 277px;
+			float: left;
+			background-color: red;
+		}
+		#top #language{
+			height: 49px;
+			width: 137px;
+			margin-bottom: 8px;
+			float: right;
+			background-color: green;
+		}
+		#top #nav{
+			width: 679px;
+			height: 46px;
+			float:right;
+			background-color: green;
+		}
+		#content{
+			margin: 0 auto;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			height: 435px;
+			width: 970px;
+			/*background-color: gray;*/
+		}
+		#content #leftpart{
+			float: left;
+			height: 435px;
+			width: 310px;
+			background-color: yellow;
+			margin-right: 10px;
+		}
+		#content #rightpart{
+			float: left;
+			width: 650px;
+			height: 435px;
+			margin-bottom: 10px;
+			/*background-color: black;*/
+		}
+		#content #main{
+			width: 450px;
+			height: 400px;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			float: left;
+		}
+		#content #rightpart #news1{
+			width: 450px;
+			height: 240px;
+			margin-bottom: 10px;
+			background-color: skyblue;
+		}
+		#content #rightpart #news2{
+			width: 450px;
+			height: 110px;
+			margin-bottom: 10px;
+			background-color: green;
+		}
+		#content #rightpart #news3{
+			width: 450px;
+			height: 30px;
+			margin-bottom: 10px;
+			background-color: skyblue;
+		}
+		#content #rightpart #hotpic{
+			width: 190px;
+			height: 400px;
+			float: left;
+			background-color: purple;
+		}
+		#content #rightpart #links{
+			float: left;
+			width: 650px;
+			height: 25px;
+			background-color: yellow;
+		}
+		#footer{
+			height: 35px;
+			width: 970px;
+			background-color: skyblue;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<!-- 头部 -->
+	<div id="top">
+		<div id="logo"></div>
+		<div id="language"></div>
+		<div id="nav"></div>
+	</div>
+	<!-- 主要内容 -->
+	<div id="content">
+		<div id="leftpart"></div>
+		<div id="rightpart">
+			<div id="main">
+				<div id="news1"></div>
+				<div id="news2"></div>
+				<div id="news3"></div>
 			</div>
- 
-			<div id="center">
-				<div id="center-left"></div>
-				<div id="center-right">
-					<div id="lanse">
-						<div id="lanse1"></div>
-						<div id="lanse2"></div>
-						<div id="lanse3"></div>
-					</div>
-					<div id="zise"></div>
-					<div id="lvse"></div>
-				</div>
-			</div>
- 
-			<div id="bottom"></div>
+			<div id="hotpic"></div>
+			<div id="links"></div>
 		</div>
- 
-	</body>
- 
+	</div>
+	<!-- 页尾 -->
+	<div id="footer"></div>
+</body>
 </html>
