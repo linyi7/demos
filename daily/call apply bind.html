@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>call bind apply</title>
+</head>
+<body>
+	<script>
+ var obj={};
+ function foo(a,b,c){console.log(b);}
+ // foo.call(obj,'c','t','y')
+ foo.apply(obj,['z','g','h'])
+	</script>
+</body>
+</html>
