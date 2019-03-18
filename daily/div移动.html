@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>div移动动画</title>
+	<!-- <style>
+      div{width:200px;height:200px;background-color: lightblue; position: absolute;left:100px;animation: myfirst 2s linear infinite;}
+      
+      	@keyframes myfirst{
+      		from{left:100px}
+      		to{left:400px;}
+      	  }
+      
+	</style> -->
+	<style>
+      div{width:200px;height:200px;background-color: lightblue; position: absolute;left:100px;
+          
+          transition:all 2s;;
+      }
+      div:hover{
+      	transform: translate(400px);
+
+      }
+      	
+      
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>
