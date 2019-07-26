@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!-- <meta http-equiv="refresh" content="5" > -->
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	
+	</head>
+
+	<body>
+
+		<div class="top_win">
+			<img src="img/logo.png" />
+			<span>移动母婴室数据可视化展示</span>
+		</div>
+
+		<div style="padding-top: 70px;"></div>
+
+		<table border="0" cellspacing="0" cellpadding="0" style="width: 100%;height: 88%;overflow: hidden;">
+			<tr>
+				<td style="height: 100%;vertical-align: top;padding: 0 10px;position: relative;">
+					<table border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
+						<tr>
+							<td style="width: 350px;vertical-align: top;">
+								<div class="left_wrap" style="width: 300px;">
+									<div class="left_win">
+										<span class="title_name">总订单数</span>
+										<div class="title_content">
+											<em class="tl"></em>
+											<em class="tr"></em>
+											<em class="br"></em>
+											<em class="bl"></em>
+											<p><span id="totalOrder"></span><em>次</em></p>
+										</div>
+										<ul class="even_list">
+											<li>
+												<div class="proportion_win">
+													<span style="float: left;">医院</span>
+													<span style="float: right;" id="hospitolnums"></span>
+													<div class="total_length clear">
+														<div class="proportion"></div>
+													</div>
+													<em id="hospitol"></em>
+												</div>
+											</li>
+											<li>
+												<div class="proportion_win">
+													<span style="float: left;">商场</span>
+													<span style="float: right;" id="mallnums"></span>
+													<div class="total_length clear">
+														<div class="proportion"></div>
+													</div>
+													<em id="mall"></em>
+												</div>
+											</li>
+											<li>
+												<div class="proportion_win">
+													<span style="float: left;">高铁</span>
+													<span style="float: right;" id="highspeednums"></span>
+													<div class="total_length clear">
+														<div class="proportion"></div>
+													</div>
+													<em id="highspeed"></em>
+												</div>
+											</li>
+											<li>
+												<div class="proportion_win">
+													<span style="float: left;">其他</span>
+													<span style="float: right;" id="qitanum"></span>
+													<div class="total_length clear">
+														<div class="proportion"></div>
+													</div>
+													<em id="qita"></em>
+												</div>
+											</li>
+											<span class="title_name">总用户数</span>
+										<div class="title_content">
+											<em class="tl"></em>
+											<em class="tr"></em>
+											<em class="br"></em>
+											<em class="bl"></em>
+											<p><span id="userToalnumber"></span><em>人</em></p>
+										</div>
+											<li>
+												<!-- <p>公众号关注：<em>78</em>个</p> -->
+												<p>微信小程序：<em id="wechatuser"></em>个</p>
+												<p>支付宝小程序：<em id="alipayuser"></em>个</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</td>
+							<td style="width: 100%;vertical-align: top;">
+							
+								<div id="main" class="main" style="width: 100%;height: 800px;"></div>
+							</td>
+						</tr>
+					</table>
+
+					<div class="data_loding">
+						<span>总使用时长:</span><span id="totalusedDuration" style="color:rgb(81,255,255)"></span><span>分钟</span>
+						<ul>
+							<li></li>
+							<li style="height: 20px;"></li>
+							<li></li>
+							<li style="height: 15px;"></li>
+							<li style="height: 25px;"></li>
+							<li style="height: 40px;"></li>
+							<li style="height: 35px;"></li>
+							<li style="height: 15px;"></li>
+							<li></li>
+							<li></li>
+							<li style="height: 40px;"></li>
+							<li style="height: 30px;"></li>
+							<li style="height: 35px;"></li>
+							<li></li>
+							<li></li>
+							<li style="height: 35px;"></li>
+							<li style="height: 30px;"></li>
+							<li style="height: 40px;"></li>
+							<li style="height: 25px;"></li>
+							<li style="height: 35px;"></li>
+							<li style="height: 25px;"></li>
+							<li style="height: 20px;"></li>
+							<li style="height: 15px;"></li>
+							<li></li>
+						</ul>
+						<div class="clear"></div>
+					</div>
+					<div class="data_loding data_loding2">
+					<!-- <span>平均使用时长:</span><span id="avgUsedtime" style="color:rgb(81,255,255)"></span>	<span>秒</span> -->
+						<ul>
+							<li></li>
+							<li style="height: 20px;"></li>
+							<li></li>
+							<li style="height: 15px;"></li>
+							<li style="height: 25px;"></li>
+							<li style="height: 40px;"></li>
+							<li style="height: 35px;"></li>
+							<li style="height: 15px;"></li>
+							<li></li>
+							<li></li>
+							<li style="height: 40px;"></li>
+							<li style="height: 30px;"></li>
+							<li style="height: 35px;"></li>
+							<li></li>
+							<li></li>
+							<li style="height: 35px;"></li>
+							<li style="height: 30px;"></li>
+							<li style="height: 40px;"></li>
+							<li style="height: 25px;"></li>
+							<li style="height: 35px;"></li>
+							<li style="height: 25px;"></li>
+							<li style="height: 20px;"></li>
+							<li style="height: 15px;"></li>
+							<li></li>
+						</ul>
+						<div class="clear"></div>
+					</div>
+				</td>
+				<td style="width: 500px;height: 100%;vertical-align: top;padding-top: 20px;">
+					<div class="map_right">
+						<table border="0" cellspacing="0" cellpadding="0" style="width: 100%;margin-top: 40px;margin-bottom: 40px;"  class="">
+							<tr>
+								<td style="width: 40px;vertical-align: top;	" class="left_title">
+									<div style="width: 40px;">
+										<em></em>
+										<span>今日最活跃网点</span>
+									</div>
+								</td>
+								<td  class="spacerand" >
+									<div class="boxcontainer">
+										<ul class="ulcontainer" id="activeUl">
+											<li class="labeltitle"><span class="span1">活跃设备地点</span> <span>今日订单</span> <span>平均时长</span></li>
+											<span id="zwf"></span><span id="zwf1"></span><span id="zwf2"></span><span id="zwf3"></span><span id="zwf4"></span><span id="zwf5"></span><span id="zwf6"></span><span id="zwf7"></span><span id="zwf8"></span><span id="zwf9"></span>
+										</ul>
+									</div>
+								</td>
+							</tr>
+						</table>
+
+						<table border="0" cellspacing="0" cellpadding="0" style="width: 100%;" class="duibi_win">
+							<tr>
+								<td style="width: 40px;vertical-align: top;	" class="left_title">
+									<div style="width: 40px;">
+										<em></em>
+										<span>重复使用人群占比</span>
+									</div>
+								</td>
+								<td style="width: 100%;vertical-align: top;">
+									<!-- <ul>
+										<li>
+											<span>最大增福</span>
+											<p>28.6<em>M</em><b>+32%</b><i>↑</i></p>
+											<div class="">
+												<p>标准<em>10.3</em>M</p>
+											</div>
+										</li>
+										<li>
+											<span>最大增福</span>
+											<p>13.2<em>M</em><b>-22%</b><i style="color: red;">↓</i></p>
+											<div class="">
+												<p>标准<em>10.3</em>M</p>
+											</div>
+										</li>
+										<div class="clear"></div>
+									</ul> -->
+									<p class="title">场地类型用户重复使用占比情况</p>
+									<table border="0" cellspacing="0" cellpadding="0" style="width: 500px;">
+										<tr>
+											<td style="">
+												<div class="win">
+													<p>63 <em>M</em><span>+62%</span></p>
+													<!--<div id="proportion" class="" style="width: 100%;height: 100px;"></div>-->
+													<div class="circular_win">
+														<div class="circular1" style="width: 100px;height: 100px;margin:auto;position: relative;">
+															<canvas id="Circular1" width="200" height="200" style="zoom: 0.5"></canvas>
+														</div>
+													</div>
+												</div>
+												<span class="city_name">医院</span>
+											</td>
+											<td style="">
+												<div class="win">
+													<p>42 <em>M</em><span>+23%</span></p>
+													<!--<div id="proportion2" class="" style="width: 100%;height: 100px;"></div>-->
+													<div class="circular_win">
+														<div class="circular1" style="width: 100px;height: 100px;margin:auto;position: relative;">
+															<canvas id="Circular2" width="200" height="200" style="zoom: 0.5"></canvas>
+														</div>
+													</div>
+												</div>
+												<span class="city_name">商场</span>
+											</td>
+											<td style="">
+												<div class="win">
+													<p>20 <em>M</em><span>+11%</span></p>
+													<div class="circular1" style="width: 100px;height: 100px;margin:auto;position: relative;">
+														<canvas id="Circular3" width="200" height="200" style="zoom: 0.5"></canvas>
+													</div>
+												</div>
+												<span class="city_name">高铁站</span>
+											</td>
+											<td style="">
+												<div class="win">
+													<p>37 <em>M</em><span>+20%</span></p>
+													<div class="circular1" style="width: 100px;height: 100px;margin:auto;position: relative;">
+														<canvas id="Circular4" width="200" height="200" style="zoom: 0.5"></canvas>
+													</div>
+												</div>
+												<span class="city_name">其他</span>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+						<table border="0" cellspacing="0" cellpadding="0" style="width: 100%;margin-top: 40px;" class="">
+							<tr>
+								<td style="width: 40px;vertical-align: top;	" class="left_title">
+									<div style="width: 40px;">
+										<em></em>
+										<span>用户增长情况</span>
+									</div>
+								</td>
+								<td >
+									<div id="columnEcharts" ></div>
+								</td>
+							</tr>
+						</table>
+
+					</div>
+				</td>
+			</tr>
+
+		</table>
+
+	</body>
+		<script type="text/javascript" src="js/echarts.js"></script>  <!-- 4.2.1版本echarts -->
+		<script type="text/javascript" src="js/china.js"></script>  <!-- 地图数据 -->
+		<script type="text/javascript" src="js/fzajax.js"></script>	<!-- 引入封装的ajax -->
+		<script type="text/javascript" src="js/index.js"></script> <!-- 地图配置项 注意：先引入ajax不然会报错-->
+		 <!-- <script type="text/javascript" src="js/axios.js"></script> -->	<!-- axios请求 -->
+  
+	<!-- 右下角变化最快统计方法 -->
+	<script type="text/javascript" src="./lib/canvas.js"></script>
+	<script type="text/javascript" src="./lib/tween.js"></script>
+	<script type="text/javascript" src="./lib/index.js"></script>
+	<!-- 右下角变化最快统计方法 -->
+
+	<script type="text/javascript">
+
+
+		window.onload = function() {
+			//进度条控制
+			var proportion_win_length = ['200px', '200px', '200px', '200px'];
+			var bar_length = ['5%', '65%', '12%', '18%'];
+			var bar_bg = ['#FF0D0D', '#FF6801', '#51FFFF', '#42CA83'];
+			proportion(proportion_win_length, bar_length, bar_bg);
+
+			function proportion(proportion_win_length, bar_length, bar_bg) {
+				var proportion_win = document.getElementsByClassName("proportion_win");
+				var proportion = document.getElementsByClassName("proportion");
+				for(var i = 0; i < proportion_win.length; i++) {
+					proportion_win[i].style.cssText = 'width:' + proportion_win_length[i] + '';
+					proportion[i].style.cssText = 'width:' + bar_length[i] + ';background-color:' + bar_bg[i] + '';
+				};
+			}
+			
+			
+			circular1 = new Circular('Circular1', {
+				color: '#30979C',
+				animate: true,
+				value: 63,
+				radius: 50,
+				lineWidth: 8,
+				showNumber: false,
+				text: '#fff',
+				backgroundColor: '#030F24',
+				lineCap:'butt'
+			})
+			circular1.show();
+			circular2 = new Circular('Circular2', {
+				color: '#30979C',
+				animate: true,
+				value: 63,
+				radius: 50,
+				lineWidth: 8,
+				showNumber: false,
+				text: '#fff',
+				backgroundColor: '#030F24',
+				lineCap:'butt'
+			})
+			circular2.show();
+			circular3 = new Circular('Circular3', {
+				color: '#30979C',
+				animate: true,
+				value: 63,
+				radius: 50,
+				lineWidth: 8,
+				showNumber: false,
+				text: '#fff',
+				backgroundColor: '#030F24',
+				lineCap:'butt'
+			})
+			circular3.show();
+			circular4 = new Circular('Circular4', {
+				color: '#30979C',
+				animate: true,
+				value: 63,
+				radius: 50,
+				lineWidth: 8,
+				showNumber: false,
+				text: '#fff',
+				backgroundColor: '#030F24',
+				lineCap:'butt'
+			})
+			circular4.show();
+
+
+
+// 各个类型订单数据
+ajax({
+        url: "https://www.mymamain.com/api/statistics/categoryOrders",
+        async: false,
+        success: function (data) {
+						 orderType = JSON.parse(data)
+					
+            console.log('类型订单',orderType.info.category_order_data)
+
+
+        },
+        error: function (message,code) {
+                    
+                }
+});   
+var orderType;
+// 类型其他
+document.getElementById('qitanum').innerHTML =orderType.info.category_order_data[0].order_number+'次'
+document.getElementById('qita').innerHTML =parseInt(orderType.info.category_order_data[0].order_sales*100) +'%'
+// 类型医院
+document.getElementById('hospitolnums').innerHTML =orderType.info.category_order_data[1].order_number+'次'
+document.getElementById('hospitol').innerHTML =parseInt(orderType.info.category_order_data[1].order_sales*100) +'%'
+// 类型商场
+document.getElementById('mallnums').innerHTML =orderType.info.category_order_data[2].order_number+'次'
+document.getElementById('mall').innerHTML =parseInt(orderType.info.category_order_data[2].order_sales*100) +'%'
+// 类型高铁
+document.getElementById('highspeednums').innerHTML =orderType.info.category_order_data[3].order_number+'次'
+document.getElementById('highspeed').innerHTML = parseInt(orderType.info.category_order_data[3].order_sales*100) +'%'
+
+
+
+
+		}
+
+
+
+//ajax请求封装
+
+					ajax({
+							url: "https://www.mymamain.com/api/statistics/index",
+							async: true,
+							success: function (data) {
+									// console.log(data)
+									let	dataSourcer = JSON.parse(data)//将请求得到的参数赋值给全局变量dataSource
+
+		// console.log('ssss',dataSourcer);
+		// 总用户数
+			document.getElementById("userToalnumber").innerHTML = dataSourcer.userinfo.user_total_number; 
+			// 微信小程序用户数
+		document.getElementById("wechatuser").innerHTML = dataSourcer.userinfo.wechat_number; 
+		// 支付宝小程序用户数
+		document.getElementById("alipayuser").innerHTML = dataSourcer.userinfo.alipay_number; 
+
+		// 总订单数
+		document.getElementById("totalOrder").innerHTML = dataSourcer.orderinfo.total_number; 
+
+		//总使用时长
+		let sttr = dataSourcer.orderinfo.total_used_duration.slice(0,7);//去掉小数点 
+		let sttrArr = sttr.split(',')//分割字符串成数组
+		let usetime = parseInt(sttrArr.join('')/60)//变成分钟
+			// console.log('sssss',typeof usetime )
+			document.getElementById("totalusedDuration").innerHTML = usetime 
+		//平均使用时长
+		// document.getElementById("avgUsedtime").innerHTML ='&nbsp;'+dataSourcer.orderinfo.avg_used_duration; 
+
+	
+		let activeArr = dataSourcer.statisticsinfo.active_dot //活跃设备数组集合
+
+		document.getElementById("zwf").innerHTML = '<li><span class="span1" >'+activeArr[0].name+ '</span><span >'+activeArr[0].total_order_count+'</span> <span>'+parseInt(activeArr[0].single_order_use_duration/60)+'分钟'+'</span>  </li>'
+		document.getElementById("zwf1").innerHTML = '<li><span class="span1" >'+activeArr[1].name+ '</span><span >'+activeArr[1].total_order_count+'</span> <span>'+parseInt(activeArr[1].single_order_use_duration/60)+'分钟'+'</span>  </li>'
+		document.getElementById("zwf2").innerHTML = '<li><span class="span1" >'+activeArr[2].name+ '</span><span >'+activeArr[2].total_order_count+'</span> <span>'+parseInt(activeArr[2].single_order_use_duration/60)+'分钟'+'</span>  </li>'
+		document.getElementById("zwf3").innerHTML = '<li><span class="span1" >'+activeArr[3].name+ '</span><span >'+activeArr[3].total_order_count+'</span> <span>'+parseInt(activeArr[3].single_order_use_duration/60)+'分钟'+'</span>  </li>'
+		document.getElementById("zwf4").innerHTML = '<li><span class="span1" >'+activeArr[4].name+ '</span><span >'+activeArr[4].total_order_count+'</span> <span>'+parseInt(activeArr[4].single_order_use_duration/60)+'分钟'+'</span>  </li>'
+		document.getElementById("zwf5").innerHTML = '<li><span class="span1" >'+activeArr[5].name+ '</span><span >'+activeArr[5].total_order_count+'</span> <span>'+parseInt(activeArr[5].single_order_use_duration/60)+'分钟'+'</span>  </li>'
+		document.getElementById("zwf6").innerHTML = '<li><span class="span1" >'+activeArr[6].name+ '</span><span >'+activeArr[6].total_order_count+'</span> <span>'+parseInt(activeArr[6].single_order_use_duration/60)+'分钟'+'</span>  </li>'
+		document.getElementById("zwf7").innerHTML = '<li><span class="span1" >'+activeArr[7].name+ '</span><span >'+activeArr[7].total_order_count+'</span> <span>'+parseInt(activeArr[7].single_order_use_duration/60)+'分钟'+'</span>  </li>'
+		document.getElementById("zwf8").innerHTML = '<li><span class="span1" >'+activeArr[8].name+ '</span><span >'+activeArr[8].total_order_count+'</span> <span>'+parseInt(activeArr[8].single_order_use_duration/60)+'分钟'+'</span>  </li>'
+		document.getElementById("zwf9").innerHTML = '<li><span class="span1" >'+activeArr[9].name+ '</span><span >'+activeArr[9].total_order_count+'</span> <span>'+parseInt(activeArr[9].single_order_use_duration/60)+'分钟'+'</span>  </li>'
+
+	
+							},
+							error: function (message,code) {
+										
+							}
+					});
+
+
+	
+					
+			</script>
+</html>
